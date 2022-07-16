@@ -250,6 +250,14 @@ export function loadShields(shieldImages) {
     },
   };
 
+  let pentagonAngledShield = {
+    ...pentagonShield,
+    backgroundImage: [
+      shieldImages.shield_pent_angled_2,
+      shieldImages.shield_pent_angled_3,
+    ],
+  };
+
   let pentagonShieldBlueYellow = {
     ...pentagonShield,
     backgroundImage: [
@@ -2403,6 +2411,47 @@ export function loadShields(shieldImages) {
   );
 
   // SOUTH AMERICA
+
+  // Brazil
+  shields["BR"] = {
+    backgroundImage: shieldImages.shield40_br,
+    textColor: Color.shields.black,
+    padding: {
+      left: 2,
+      right: 2,
+      top: 4,
+      bottom: 5,
+    },
+  };
+  [
+    "AC",
+    "AL",
+    "AM",
+    "AP",
+    "BA",
+    "CE",
+    "DF",
+    "ES",
+    "GO",
+    "MA",
+    "MG",
+    "MS",
+    "MT",
+    "PA",
+    "PB",
+    "PE",
+    "PI",
+    "PR",
+    "RJ",
+    "RN",
+    "RO",
+    "RR",
+    "RS",
+    "SC",
+    "SE",
+    "SP",
+    "TO",
+  ].forEach((state) => (shields[`BR:${state}`] = pentagonAngledShield));
 
   // Chile
   shields["CL:national"] = {
