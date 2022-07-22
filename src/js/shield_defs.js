@@ -1619,12 +1619,19 @@ export function loadShields(shieldImages) {
   shields["US:NJ:CR:Spur"] = banneredShield(shields["US:NJ:CR"], ["SPUR"]);
   shields["US:NJ:CR:Truck"] = banneredShield(shields["US:NJ:CR"], ["TRK"]);
 
-  // New Mexico
-  shields["US:NM"] = pillShield(
-    Color.shields.white,
-    Color.shields.pink,
-    Color.shields.black
-  );
+  shields["US:NM"] = {
+    backgroundImage: [
+      shieldImages.shield40_us_nm_2,
+      shieldImages.shield40_us_nm_3,
+    ],
+    textColor: Color.shields.black,
+    padding: {
+      left: 7,
+      right: 7,
+      top: 7,
+      bottom: 7,
+    },
+  };
   [
     "Cibola",
     "Doña_Ana",
