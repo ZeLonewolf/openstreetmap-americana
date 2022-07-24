@@ -654,6 +654,9 @@ export function loadShields(shieldImages) {
   // Yukon
   shields["CA:YT"] = roundedRectShield(Color.shields.white, Color.shields.red);
 
+  // Costa Rica
+  shields["CR:national"] = badgeShield;
+
   // United States
 
   // Interstate Highways
