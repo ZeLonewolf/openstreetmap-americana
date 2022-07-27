@@ -3164,6 +3164,15 @@
     },
     {
       "key": "network",
+      "value": "US:KY:Parkway",
+      "object_types": [
+        "relation"
+      ],
+      "description": "Roads carrying routes in this network are marked by shields.",
+      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_us_ky_parkway.svg"
+    },
+    {
+      "key": "network",
       "value": "US:KY:AA",
       "object_types": [
         "relation"
@@ -7062,6 +7071,24 @@
     },
     {
       "key": "network",
+      "value": "US:NY:Parkway",
+      "object_types": [
+        "relation"
+      ],
+      "description": "Roads carrying routes in this network are marked by shields.",
+      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_us_ny_parkway_2.svg"
+    },
+    {
+      "key": "network",
+      "value": "US:NY:Parkway:NYC",
+      "object_types": [
+        "relation"
+      ],
+      "description": "Roads carrying routes in this network are marked by shields.",
+      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_us_ny_parkway_nyc.svg"
+    },
+    {
+      "key": "network",
       "value": "US:NY:Albany",
       "object_types": [
         "relation"
@@ -9069,6 +9096,24 @@
       ],
       "description": "Roads carrying routes in this network are marked by shields.",
       "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_home_blue_red_3.svg"
+    },
+    {
+      "key": "network",
+      "value": "US:TX:Fort_Bend:FBCTRA",
+      "object_types": [
+        "relation"
+      ],
+      "description": "Roads carrying routes in this network are marked by shields.",
+      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_us_tx_fbctra.svg"
+    },
+    {
+      "key": "network",
+      "value": "US:TX:Harris:HCTRA",
+      "object_types": [
+        "relation"
+      ],
+      "description": "Roads carrying routes in this network are marked by shields.",
+      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_pent_purple_yellow_3.svg"
     },
     {
       "key": "network",
@@ -13009,33 +13054,6 @@
       ],
       "description": "Roads carrying routes in this network are marked by shields.",
       "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_home_2.svg"
-    },
-    {
-      "key": "network",
-      "value": "US:KY:Parkway",
-      "object_types": [
-        "relation"
-      ],
-      "description": "Roads carrying routes in this network are marked by shields.",
-      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_us_ky_parkway.svg"
-    },
-    {
-      "key": "network",
-      "value": "US:TX:Fort_Bend:FBCTRA",
-      "object_types": [
-        "relation"
-      ],
-      "description": "Roads carrying routes in this network are marked by shields.",
-      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_us_tx_fbctra.svg"
-    },
-    {
-      "key": "network",
-      "value": "US:TX:Harris:HCTRA",
-      "object_types": [
-        "relation"
-      ],
-      "description": "Roads carrying routes in this network are marked by shields.",
-      "icon_url": "https://raw.githubusercontent.com/ZeLonewolf/openstreetmap-americana/main/icons/shield_pent_purple_yellow_3.svg"
     }
   ]
 }
