@@ -634,6 +634,39 @@ class TertiaryExpressway extends Tertiary {
   }
 }
 
+class Busway extends Road {
+  constructor() {
+    super();
+    this.highwayClass = "busway";
+    this.brunnel = "surface";
+    this.link = false;
+    this.toll = false;
+    this.hue = 0;
+
+    this.minZoomFill = 12;
+    this.minZoomCasing = 12;
+
+    this.fillWidth = Util.zoomMultiply(trunkFillWidth, 0.5);
+    this.casingWidth = Util.zoomMultiply(trunkCasingWidth, 0.5);
+
+    this.fillColor = [
+      "interpolate",
+      ["exponential", roadExp],
+      ["zoom"],
+      this.minZoomFill,
+      `hsl(${this.hue}, 0%, 85%)`,
+      this.minZoomFill + 2,
+      `hsl(${this.hue}, 0%, 75%)`,
+      14.9999,
+      `hsl(${this.hue}, 0%, 75%)`,
+      15,
+      `hsl(${this.hue}, 0%, 80%)`,
+    ];
+    this.casingColor = roadCasingColor(this.hue, this.minZoomCasing);
+    this.surfaceColor = `hsl(${this.hue}, 0%, 80%)`;
+  }
+}
+
 class Minor extends Road {
   constructor() {
     super();
@@ -1017,6 +1050,14 @@ class TertiaryExpresswayBridge extends TertiaryExpressway {
   }
 }
 
+class BuswayBridge extends Busway {
+  constructor() {
+    //undifferentiated
+    super();
+    this.brunnel = "bridge";
+  }
+}
+
 class MinorBridge extends Minor {
   constructor() {
     //undifferentiated
@@ -1274,6 +1315,15 @@ class TertiaryExpresswayTunnel extends TertiaryExpressway {
   }
 }
 
+class BuswayTunnel extends Busway {
+  constructor() {
+    super();
+    this.brunnel = "tunnel";
+    this.casingColor = `hsl(${this.hue}, 0%, 80%)`;
+    this.fillColor = `hsl(${this.hue}, 0%, 95%)`;
+  }
+}
+
 class MinorTunnel extends Minor {
   constructor() {
     super();
@@ -1429,6 +1479,7 @@ export const secondaryExpressway = new SecondaryExpressway();
 export const tertiary = new Tertiary();
 export const tertiaryToll = new TertiaryToll();
 export const tertiaryExpressway = new TertiaryExpressway();
+export const busway = new Busway();
 export const minor = new Minor();
 export const minorToll = new MinorToll();
 export const service = new Service();
@@ -1448,6 +1499,7 @@ export const secondaryExpresswayBridge = new SecondaryExpresswayBridge();
 export const tertiaryBridge = new TertiaryBridge();
 export const tertiaryTollBridge = new TertiaryTollBridge();
 export const tertiaryExpresswayBridge = new TertiaryExpresswayBridge();
+export const buswayBridge = new BuswayBridge();
 export const minorBridge = new MinorBridge();
 export const minorTollBridge = new MinorTollBridge();
 export const serviceBridge = new ServiceBridge();
@@ -1467,6 +1519,7 @@ export const secondaryExpresswayTunnel = new SecondaryExpresswayTunnel();
 export const tertiaryTunnel = new TertiaryTunnel();
 export const tertiaryTollTunnel = new TertiaryTollTunnel();
 export const tertiaryExpresswayTunnel = new TertiaryExpresswayTunnel();
+export const buswayTunnel = new BuswayTunnel();
 export const minorTunnel = new MinorTunnel();
 export const minorTollTunnel = new MinorTollTunnel();
 export const serviceTunnel = new ServiceTunnel();

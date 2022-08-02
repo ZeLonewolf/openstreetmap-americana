@@ -7,7 +7,7 @@ const highwaySelector = ["match", ["get", "class"]];
 const motorwayToTrunk = ["motorway", "trunk"];
 const motorwayToPrimary = [...motorwayToTrunk, "primary"];
 const motorwayToSecondary = [...motorwayToPrimary, "secondary"];
-const motorwayToMinor = [...motorwayToSecondary, "tertiary", "minor"];
+const motorwayToMinor = [...motorwayToSecondary, "tertiary", "minor", "busway"];
 const motorwayToService = [...motorwayToMinor, "service"];
 
 const majorConstruction = ["motorway_construction", "trunk_construction"];
@@ -101,7 +101,6 @@ export const label = {
       [...highwaySelector, motorwayToSecondary, "center", "bottom"],
     ],
     "symbol-sort-key": [
-      // TODO busway
       ...highwaySelector,
       "motorway",
       0,
@@ -111,7 +110,7 @@ export const label = {
       2,
       "secondary",
       3,
-      ["tertiary", "minor"],
+      ["tertiary", "minor", "busway"],
       4,
       5,
     ],
