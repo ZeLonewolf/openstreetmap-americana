@@ -304,6 +304,13 @@ export function getRouteDef(id) {
 }
 
 /**
+ * Reformats an alphanumeric ref as Eastern Arabic numerals, preserving any
+ * alphabetic suffix.
+ */
+export const arabizeRef = (ref) =>
+  ref.replaceAll(/[0-9]/g, (m) => String.fromCharCode(0x0660 + parseInt(m)));
+
+/**
  * Reformats an alphanumeric ref as Roman numerals, preserving any alphabetic
  * suffix.
  */
@@ -382,8 +389,15 @@ export function generateShieldCtx(map, id) {
   // Convert numbering systems. Normally alternative numbering systems should be
   // tagged directly in ref=*, but some shields use different numbering systems
   // for aesthetic reasons only.
-  if (routeDef.ref && shieldDef.numberingSystem === "roman") {
-    routeDef.ref = romanizeRef(routeDef.ref);
+  if (routeDef.ref) {
+    switch (shieldDef.numberingSystem) {
+      case "arab":
+        routeDef.ref = arabizeRef(routeDef.ref);
+        break;
+      case "roman":
+        routeDef.ref = romanizeRef(routeDef.ref);
+        break;
+    }
   }
 
   // Add the halo around modifier plaque text
