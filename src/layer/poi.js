@@ -35,6 +35,14 @@ var iconDefs = {
     color: Color.poi.transport,
     description: "Bus stop",
   },
+  cemetery: {
+    classes: {
+      cemetery: ["cemetery"],
+    },
+    sprite: "poi_gravestone",
+    color: Color.poi.outdoor,
+    decription: "Cemetery",
+  },
   coffee: {
     classes: {
       cafe: ["cafe"],
@@ -287,6 +295,8 @@ export const poi = {
         ...getSubclasses(iconDefs.pow_taoist),
       ],
       Color.poi.infrastructure,
+      ["cemetery"],
+      Color.poi.outdoor,
       Color.poi.infrastructure,
     ],
   },
@@ -320,7 +330,11 @@ export const poi = {
         "tram_stop",
       ],
       15,
-      [...getSubclasses(iconDefs.bar), ...getSubclasses(iconDefs.coffee)],
+      [
+        ...getSubclasses(iconDefs.bar),
+        ...getSubclasses(iconDefs.coffee),
+        ...getSubclasses(iconDefs.cemetery),
+      ],
       16,
       ["clinic", "doctors", "parking"],
       17,
