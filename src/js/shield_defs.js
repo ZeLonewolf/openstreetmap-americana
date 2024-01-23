@@ -2803,6 +2803,17 @@ export function loadShields() {
     shields["GH:regional"] =
       roundedRectShield(Color.shields.yellow, Color.shields.black);
 
+  // South Africa
+  shields["za:national"] = pentagonUpShield(
+    6,
+    15,
+    Color.shields.blue,
+    Color.shields.white,
+    Color.shields.yellow,
+    0,
+    0
+  );
+
   // ASIA
 
   // Armenia

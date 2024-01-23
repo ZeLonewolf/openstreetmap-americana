@@ -90,6 +90,7 @@ let networks = [
   "AU:ACT:T",
   "US:NM:San_Juan:NCM",
   "US:TX:Harris:HCTRA",
+  "za:national",
 
   "JP:prefectural",
   "PK:national",
