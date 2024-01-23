@@ -410,6 +410,9 @@ export function loadShields() {
   // Yukon
   shields["CA:YT"] = roundedRectShield(Color.shields.white, Color.shields.red);
 
+  // Costa Rica
+  shields["CR:national"] = badgeShield;
+
   // Haiti
   shields["HT:RN-road"] = shields["HT:RD-road"] = roundedRectShield(
     Color.shields.blue,
