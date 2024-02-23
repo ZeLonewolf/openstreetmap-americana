@@ -48,7 +48,7 @@ describe("shield", function () {
   });
   describe("#isValidRef", function () {
     it("rejects an empty ref", function () {
-      expect(isBlankSprite("shield\nUS:RI\n\n")).to.be.true;
+      expect(isBlankSprite("shield\nUS:RI\n\n\n")).to.be.true;
     });
     it("rejects a long ref", function () {
       expect(mockRepo.hasSprite("shield\nUS:RI\nABC123\n\n")).to.be.true;
